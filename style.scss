@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+li {
+    list-style-type: none;
+}
+
+
+//для привязки футера к низу
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    // центрирование; 720px - половина ширины макета
+
+    padding-left: calc(50% - 720px);
+    padding-right: calc(50% - 720px);
+}
+
+// отступы; 10% - вариативная величина
+
+.padding-site {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.wrapper {
+    flex-grow: 1;
+}
+
+header {
+
+}
+
+// СЛАЙДЕР
+
+$sliderHeight: 800px; // высота слайдера
+$sliderWidth: 1200px; // ширина слайда
+
+.slider {
+    position: relative;
+    height: $sliderHeight;
+    width: $sliderWidth; // ширина слайда
+
+    .slide {
+        height: $sliderHeight;
+        width: $sliderWidth;
+        position: absolute;
+        a {
+            display: block;
+            height: $sliderHeight;
+
+        }
+
+    }
+    &__arrow {
+        font-size: $sliderHeight / 10;
+        color: white;
+        position: absolute;
+        top: 40%;
+        &_left {
+            left: 5%;
+        }
+        &_right {
+            right: 5%;
+        }
+    }
+   
+}
+
+footer {
+    height: 200px; //пример, надо поменять на значение из макета
+}
